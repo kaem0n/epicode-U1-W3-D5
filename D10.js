@@ -474,12 +474,13 @@ tree(4)
 */
 
 const isItPrime = function (n) {
+  console.log('29a) Valore di n:', n)
   if (n === 2 || n === 3) {
     return true
   } else if (n % 2 === 0) {
     return false
   } else {
-    for (let i=3; i<=n; i++) {
+    for (let i=3; i<n; i++) {
       if (n % i === 0) {
         return false
       } else {
@@ -616,4 +617,4 @@ console.log('17) Cerco la parola "Rings" usando la funzione appena creata:', sea
 console.log('18) Cerco la parola "Avengers" usando la funzione appena creata:', searchAndDivide('Avengers'))
 console.log('19) Rimuovo l\'indice n. 12 dall\'array "movies":', removeIndex(12))
 console.log('/==/ EXTRA /==/')
-console.log('29) Test isItPrime():', isItPrime(23))
+console.log('29b) Test isItPrime():', isItPrime(5))
