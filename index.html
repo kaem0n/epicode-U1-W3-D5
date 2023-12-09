@@ -11,6 +11,21 @@
         color: white;
         background-color: rgb(48, 48, 48);
       }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        min-height: 100px;
+        min-width: 100px;
+        padding: 15px 20px 0 20px;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -19,6 +34,18 @@
         Apri la console dagli strumenti di sviluppo per verificare le tue
         risposte o scoprire eventuali errori!
       </h2>
+      <hr />
+      <h2>Spazio per gli EXTRA:</h2>
+      <section>
+        <figure>
+          <p>Esercizio 27</p>
+          <div id="e27"></div>
+        </figure>
+        <figure>
+          <p>Esercizio 28</p>
+          <div id="e28"></div>
+        </figure>
+      </section>
     </main>
     <script src="D10.js"></script>
   </body>

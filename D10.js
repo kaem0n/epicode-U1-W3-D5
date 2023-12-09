@@ -428,6 +428,20 @@ const trClassAddTest = function () {
 
 */
 
+const halfTree = function (n) {
+  const leaf = '*'
+  const parts = []
+  parts.push(leaf)
+  const container = document.getElementById('e27')
+  let treeHTML = `<span>*</span>`
+  for (let i=1; i<n; i++) {
+    parts.push(parts[i-1].concat(leaf))
+    treeHTML += `<span>${parts[i]}</span>`
+  }
+  container.innerHTML = treeHTML
+}
+halfTree(4)
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -440,9 +454,40 @@ const trClassAddTest = function () {
 
 */
 
+const tree = function (n) {
+  const leaf = '*'
+  const parts = []
+  parts.push(leaf)
+  const container = document.getElementById('e28')
+  container.style.alignItems = 'center'
+  let treeHTML = `<span>*</span>`
+  for (let i=1; i<n; i++) {
+    parts.push((parts[i-1] + leaf + leaf))
+    treeHTML += `<span>${parts[i]}</span>`
+  }
+  container.innerHTML = treeHTML
+}
+tree(4)
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const isItPrime = function (n) {
+  if (n === 2 || n === 3) {
+    return true
+  } else if (n % 2 === 0) {
+    return false
+  } else {
+    for (let i=3; i<=n; i++) {
+      if (n % i === 0) {
+        return false
+      } else {
+        return true
+      }
+    }
+  }
+}
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -570,3 +615,5 @@ console.log('16) La somma di tutti gli anni dei film di "movies" è:', sumAllThe
 console.log('17) Cerco la parola "Rings" usando la funzione appena creata:', searchByTitle('Rings'))
 console.log('18) Cerco la parola "Avengers" usando la funzione appena creata:', searchAndDivide('Avengers'))
 console.log('19) Rimuovo l\'indice n. 12 dall\'array "movies":', removeIndex(12))
+console.log('/==/ EXTRA /==/')
+console.log('29) Test isItPrime():', isItPrime(23))
