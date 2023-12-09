@@ -333,9 +333,17 @@ const searchAndDivide = function (str) {
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-
+const removeIndex = function (n) {
+  if (n >= movies.length) {
+    return 'Valore non valido.'
+  } else {
+    movies.splice(n, 1)
+    return movies
+  }
+}
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
+console.log('/==/ DOM /==/')
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
@@ -520,3 +528,4 @@ console.log('15) Film prodotti nel secolo scorso:', onlyInLastMillennium())
 console.log('16) La somma di tutti gli anni dei film di "movies" è:', sumAllTheYears())
 console.log('17) Cerco la parola "Rings" usando la funzione appena creata:', searchByTitle('Rings'))
 console.log('18) Cerco la parola "Avengers" usando la funzione appena creata:', searchAndDivide('Avengers'))
+console.log('19) Rimuovo l\'indice n. 12 dall\'array "movies":', removeIndex(12))
